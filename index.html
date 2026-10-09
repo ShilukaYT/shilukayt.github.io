@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preload" as="font" type="font/ttf" href="/assets/GoogleSans-Medium-BtpXYtLb.ttf" crossorigin="anonymous">
     <link rel="preload" as="font" type="font/ttf" href="/assets/materialdesignicons-webfont-B7mPwVP_.ttf" crossorigin="anonymous">
     <link rel="preload" as="font" type="font/eot" href="/assets/materialdesignicons-webfont-CSr8KVlo.eot" crossorigin="anonymous">
     <link rel="preload" as="font" type="font/woff2" href="/assets/materialdesignicons-webfont-Dp5v-WZN.woff2" crossorigin="anonymous">
@@ -202,15 +203,57 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiếu GL Lite</title>
-    <script type="module" crossorigin src="/assets/index-sEYquHgG.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/@fortawesome-BQhRbwvE.js">
-    <link rel="modulepreload" crossorigin href="/assets/@vue-CSFT8n8W.js">
-    <link rel="modulepreload" crossorigin href="/assets/@intlify-B943miE5.js">
-    <link rel="modulepreload" crossorigin href="/assets/vue-i18n-DYyKml9O.js">
-    <link rel="modulepreload" crossorigin href="/assets/vue-router-B640AlaD.js">
-    <link rel="modulepreload" crossorigin href="/assets/vuetify-B0Vm8IkI.js">
-    <link rel="stylesheet" crossorigin href="/assets/vuetify-4tn5gESG.css">
-    <link rel="stylesheet" crossorigin href="/assets/index-C-7-eJ5a.css">
+    <!-- Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- Early Theme Initialization to prevent flicker -->
+    <script type="text/javascript">
+      (function() {
+        try {
+          var pref = localStorage.getItem('user_theme_preference') || localStorage.getItem('theme_preference');
+          var actual = localStorage.getItem('hieugllite_theme');
+          var isDark = true;
+          if (pref === 'light') {
+            isDark = false;
+          } else if (pref === 'dark') {
+            isDark = true;
+          } else if (actual === 'light') {
+            isDark = false;
+          } else if (actual === 'dark') {
+            isDark = true;
+          } else if (window.matchMedia) {
+            isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          }
+          if (isDark) {
+            document.documentElement.classList.add('theme-dark');
+            document.documentElement.classList.remove('theme-light');
+          } else {
+            document.documentElement.classList.add('theme-light');
+            document.documentElement.classList.remove('theme-dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-QpYiT5ir.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/@fortawesome-BGIv5026.js">
+    <link rel="modulepreload" crossorigin href="/assets/@iconify-CX_2sn0S.js">
+    <link rel="modulepreload" crossorigin href="/assets/@vue-DZ3FVTLn.js">
+    <link rel="modulepreload" crossorigin href="/assets/@intlify-DAohw3dp.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-i18n-ClYg-84B.js">
+    <link rel="modulepreload" crossorigin href="/assets/vue-router-BuWDLuVx.js">
+    <link rel="modulepreload" crossorigin href="/assets/vuetify-B0on-tvo.js">
+    <link rel="stylesheet" crossorigin href="/assets/vuetify-DBgdqoth.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BlkIqSdA.css">
     <link rel="stylesheet" crossorigin href="/assets/@mdi-BZHkQliH.css">
   </head>
   <body>
